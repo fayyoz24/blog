@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}main page{% endblock title %}
+
+{% block content %}
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">WelCome</h1>
+        <p class="lead">to the news channel!</p>
+        <hr class="my-4">
+        <p>in there not only you can find the latest news, also you can add yours!!!</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">see the whole posts</a>
+        </p>
+    </div>
+    <!-- {% if user.is_authenticated %}
+        {{ user.username }}!
+        <p><a href="{% url 'logout' %}">logout</a></p>
+    {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Login</a> | 
+        <a href="{% url 'signup' %}">SignUp</a>
+    {% endif %} -->
+{% endblock content %}
