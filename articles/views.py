@@ -1,5 +1,3 @@
-from re import template
-from turtle import title
 from .models import Article
 from django.views.generic import (
     ListView, DetailView, UpdateView, DeleteView, CreateView
