@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from email.policy import default
 from pathlib import Path
-import os
 from environs import Env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,6 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #Environment variables
 env = Env()
 env.read_env()
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url('DATABASE_URL')
+    "default": env.dj_db_url("DATABASE_URL")
 }
 
 
@@ -129,8 +129,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_FILES_DIRS = [str(BASE_DIR.joinpath('static'))]
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
+STATICFILES_STORAGE ='whitenoise.storage.CompressedManifestStaticFilesStorage' # new
 
 
 # Default primary key field type
@@ -149,7 +149,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #MEDIA
-MEDIA_URL = '/MEDIA/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 # CKEDITOR CONFIGS
