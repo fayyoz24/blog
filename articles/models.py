@@ -1,7 +1,3 @@
-from distutils.command.upload import upload
-from email.mime import image
-from pickle import TRUE
-from tkinter import CASCADE
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.urls import reverse
